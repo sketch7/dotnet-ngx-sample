@@ -5,6 +5,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { ServiceWorkerModule } from "@angular/service-worker";
 import { CommandModule } from "@ssv/ngx.command";
 import { SsvUxModule } from "@ssv/ngx.ux";
+import { HubConnectionFactory } from "@ssv/signalr-client";
 
 import { AppRoutingModule } from "./app-routing.module";
 
@@ -28,7 +29,18 @@ import { AppSharedModule } from "./shared";
 		}),
 		ServiceWorkerModule.register("ngsw-worker.js", { enabled: environment.production }),
 	],
-	providers: [],
+	providers: [HubConnectionFactory],
 	bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {
+
+	constructor(
+		factory: HubConnectionFactory
+	) {
+		factory.create(
+			{ key: "hero", endpointUri: "/hero" },
+			{ key: "user", endpointUri: "/userNotifications" }
+		);
+	}
+
+}

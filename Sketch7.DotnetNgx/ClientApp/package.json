@@ -32,6 +32,7 @@
     "@ssv/core": "^0.6.0",
     "@ssv/ngx.command": "^1.2.1",
     "@ssv/ngx.ux": "^0.1.4",
+    "@ssv/signalr-client": "^1.0.1",
     "aspnet-prerendering": "^3.0.1",
     "core-js": "^2.6.5",
     "rxjs": "~6.4.0",
