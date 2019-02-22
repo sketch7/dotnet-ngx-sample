@@ -1,0 +1,13 @@
+{
+	"name": "dotnetngx-root",
+	"version": "0.0.0",
+	"scripts": {
+		"start": "dotnet run -p Sketch7.DotnetNgx/Sketch7.DotnetNgx.csproj --launch-profile \"App Dev\" -c Debug",
+		"serve:prod": "dotnet run -p Sketch7.DotnetNgx/Sketch7.DotnetNgx.csproj --launch-profile \"App Prod\" -c Release",
+		"build": "dotnet publish Sketch7.DotnetNgx.sln -c Release -o ./../publish",
+		"serve:publish": "cd Sketch7.DotnetNgx && dotnet run ../publish/Sketch7.DotnetNgx.dll --launch-profile \"App Prod\""
+	},
+	"engines": {
+		"node": "10.15.1"
+	}
+}
