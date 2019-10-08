@@ -5,9 +5,7 @@
 ## What does it have?
  - Angular 8.2.x
  - .NET Core 3.0
- - SCSS for styling
- - Navigation/layout
- - Basic theming setup
+ - SSR bundled (no need to publish `node_modules`)
 
 ## Getting started
 
