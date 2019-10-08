@@ -3,10 +3,9 @@
 .NET Angular sample - based on .NET official Template
 
 ## What does it have?
- - Angular CLI 8.0 template
+ - Angular 8.2.x
  - .NET Core 2.2
  - SCSS for styling
- - Font Awesome and Bootstrap 4.x (no javascript, just styles)
  - Navigation/layout
  - Basic theming setup
 
