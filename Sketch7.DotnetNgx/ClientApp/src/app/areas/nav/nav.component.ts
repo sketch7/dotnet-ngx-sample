@@ -36,7 +36,7 @@ export class NavComponent implements OnInit, OnDestroy {
 	isDebug = this.appInfo.isDebug;
 
 	isMenuOpened = false;
-	@ViewChild("menu") menuElementRef: ElementRef | undefined;
+	@ViewChild("menu", { static: true }) menuElementRef: ElementRef | undefined;
 
 	private domClickListener$$!: () => void;
 
@@ -46,7 +46,7 @@ export class NavComponent implements OnInit, OnDestroy {
 		private document: any,
 		private appInfo: AppInfoService,
 		private renderer: Renderer2,
-	) {}
+	) { }
 
 	ngOnInit(): void {
 		this.domClickListener$$ = this.renderer.listen(

@@ -2,13 +2,14 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
-import { ServiceWorkerModule } from "@angular/service-worker";
+// import { ServiceWorkerModule } from "@angular/service-worker";
 import { CommandModule } from "@ssv/ngx.command";
 import { SsvUxModule } from "@ssv/ngx.ux";
+// import { HubConnectionFactory } from "@ssv/signalr-client";
 
 import { AppRoutingModule } from "./app-routing.module";
 
-import { environment } from "../environments/environment";
+// import { environment } from "../environments/environment";
 import { AppComponent } from "./app.component";
 import { AREAS_COMPONENTS } from "./areas/index";
 import { AppSharedModule } from "./shared";
@@ -26,9 +27,20 @@ import { AppSharedModule } from "./shared";
 		SsvUxModule.forRoot({
 			viewport: { resizePollingSpeed: 66 }
 		}),
-		ServiceWorkerModule.register("ngsw-worker.js", { enabled: environment.production }),
+		// ServiceWorkerModule.register("ngsw-worker.js", { enabled: environment.production }),
 	],
-	providers: [],
+	// providers: [HubConnectionFactory],
 	bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {
+
+	// constructor(
+	// 	factory: HubConnectionFactory
+	// ) {
+	// 	factory.create(
+	// 		{ key: "hero", endpointUri: "/hero" },
+	// 		{ key: "user", endpointUri: "/userNotifications" }
+	// 	);
+	// }
+
+}

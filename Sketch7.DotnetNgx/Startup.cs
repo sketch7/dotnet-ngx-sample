@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Sketch7.DotnetNgx.Core;
 
 namespace Sketch7.DotnetNgx
 {
@@ -50,7 +50,7 @@ namespace Sketch7.DotnetNgx
 			app.UseHttpsRedirection();
 			app.UseStaticFiles();
 			app.UseSpaStaticFiles();
-	
+
 			app.UseMvc(routes =>
 			{
 				routes.MapRoute(
@@ -70,7 +70,8 @@ namespace Sketch7.DotnetNgx
 					//options.BootModulePath = $"{spa.Options.SourcePath}/dist-server/main.bundle.js";
 					options.BootModulePath = $"{spa.Options.SourcePath}/dist-server/main.js";
 					options.BootModuleBuilder = env.IsDevelopment()
-						? new AngularCliBuilder(npmScript: "build:ssr -- ")
+						? new ChikoAngularCliBuilder(npmScript: "build:ssr:watch")
+						// ? new AngularCliBuilder(npmScript: "build:ssr -- ")
 						: null;
 					options.ExcludeUrls = new[] { "/sockjs-node" };
 				});
