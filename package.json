@@ -5,7 +5,7 @@
     "start": "npm run server",
     "startx2": "concurrently \"npm run server\" \"npm run ssr:watch\"",
     "serve:prod": "dotnet run -p Sketch7.DotnetNgx/Sketch7.DotnetNgx.csproj --launch-profile \"App Prod\" -c Release",
-    "build": "dotnet publish Sketch7.DotnetNgx.sln -c Release -o ./../publish",
+    "build": "dotnet publish Sketch7.DotnetNgx.sln -c Release -o ./publish",
     "server": "dotnet run -p Sketch7.DotnetNgx/Sketch7.DotnetNgx.csproj --launch-profile \"App Dev\" -c Debug",
     "ssr:watch": "cd Sketch7.DotnetNgx/ClientApp && npm run build:ssr:watch",
     "serve:publish": "cd Sketch7.DotnetNgx && dotnet run ../publish/Sketch7.DotnetNgx.dll --launch-profile \"App Prod\""
