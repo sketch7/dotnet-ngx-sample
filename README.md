@@ -13,7 +13,12 @@
 
 - `npm start`
 
-### Known issue
+## Publish
+
+- `npm run build`
+- To test artifact `npm run serve:publish`
+
+### Known issues
 
 - Due to `BootModuleBuilder` is timing out use the following instead:
   1. either use `ChikoAngularCliBuilder` (`Startup.cs`)
