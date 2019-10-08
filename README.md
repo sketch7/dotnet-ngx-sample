@@ -4,7 +4,7 @@
 
 ## What does it have?
  - Angular 8.2.x
- - .NET Core 2.2
+ - .NET Core 3.0
  - SCSS for styling
  - Navigation/layout
  - Basic theming setup
