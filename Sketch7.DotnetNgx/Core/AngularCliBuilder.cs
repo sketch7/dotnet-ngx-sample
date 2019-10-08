@@ -58,7 +58,7 @@ namespace Sketch7.DotnetNgx.Core
 				sourcePath,
 				_scriptName,
 				"",
-				// "--watch",
+				// "--watch", // todo: make it configurable
 				null,
 				pkgManagerCommand);
 			scriptRunner.AttachToLogger(logger);
