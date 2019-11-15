@@ -3,8 +3,9 @@
 .NET Angular sample - based on .NET official Template
 
 ## What does it have?
- - Angular 8.2.x
+ - Angular 9.x
  - .NET Core 3.0
+ - Docker
  - SSR bundled (no need to publish `node_modules`)
 
 ## Getting started
