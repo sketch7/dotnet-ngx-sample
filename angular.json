@@ -36,6 +36,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "progress": false,
             "extractCss": true,
             "outputPath": "ClientApp/dist",
