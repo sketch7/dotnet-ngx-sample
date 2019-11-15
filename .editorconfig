@@ -2,9 +2,17 @@
 root = true
 
 [*]
+charset = utf-8
 indent_style = tab
 
+[*.{js,ts}]
+indent_style = tab
+trim_trailing_whitespace = true
+spaces_around_operators = inside
+insert_final_newline = false
+
 [*.{json,yml,yaml,csproj,props,md}]
+trim_trailing_whitespace = true
 indent_size = 2
 indent_style = space
 

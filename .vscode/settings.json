@@ -1,0 +1,5 @@
+{
+  "html.format.wrapAttributes": "force",
+  "html.format.wrapLineLength": 120,
+  "html.format.maxPreserveNewLines": 1,
+}

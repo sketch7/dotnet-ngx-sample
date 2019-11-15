@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "@speedy/commit-msg-hook:latest"
+  ],
+  "rules": {
+    "message": {
+      "max-length": 200
+    }
+  }
+}
