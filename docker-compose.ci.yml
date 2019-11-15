@@ -1,0 +1,10 @@
+version: "3.4"
+
+services:
+  web:
+    image: $ECR_HOST/dotnet-ngx:${APP_VERSION}
+    build:
+      args:
+        appName: ${APP_NAME}
+        appVersion: ${APP_VERSION}
+        gitCommit: ${GIT_COMMIT}

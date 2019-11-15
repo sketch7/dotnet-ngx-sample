@@ -1,0 +1,7 @@
+version: "3.4"
+
+services:
+  web:
+    image: $ECR_HOST/dotnet-ngx
+    build:
+      context: .

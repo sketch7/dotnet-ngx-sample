@@ -1,0 +1,11 @@
+version: "3.4"
+
+services:
+  web:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - DOCKER=true
+      - APP_NAME=dotnet-ngx
+      - APP_VERSION=0.0
+    ports:
+      - "2200:80"
