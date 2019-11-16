@@ -10,15 +10,16 @@
 
 ## Getting started
 
-- `npm start`
+- `npm i`
 
-## Publish
+## Run fully development
 
-- `npm run build`
-- To test artifact `npm run serve:publish`
+- `npm start` *.net server + angular app*
 
-### Known issues
+## Run Angular only
 
-- Due to `BootModuleBuilder` is timing out use the following instead:
-  1. either use `ChikoAngularCliBuilder` (`Startup.cs`)
-  2. OR `npm run startx2`
+- `npm run serve:app` *without .net server*
+
+## Run docker
+
+- `serve:docker` *builds everything prod mode and run*

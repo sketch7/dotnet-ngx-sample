@@ -58,14 +58,16 @@
             "styles": [
               "ClientApp/src/styles.scss"
             ],
-            "scripts": [],
+            "scripts": []
           },
           "configurations": {
             "production": {
-              "fileReplacements": [{
-                "replace": "ClientApp/src/environments/environment.ts",
-                "with": "ClientApp/src/environments/environment.prod.ts"
-              }],
+              "fileReplacements": [
+                {
+                  "replace": "ClientApp/src/environments/environment.ts",
+                  "with": "ClientApp/src/environments/environment.prod.ts"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -100,7 +102,7 @@
           "options": {
             "tslintConfig": "./tslint.json",
             "tsConfig": [
-              "ClientApp/src/tsconfig.app.json",
+              "ClientApp/src/tsconfig.app.json"
             ],
             "exclude": [
               "**/node_modules/**"
